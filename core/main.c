@@ -17,17 +17,14 @@ int main()
     int kingIsValid;
     int queenIsValid;
 
-    int r, c, j, i, contaXvuoto, contaXpieno, contaYvuoto, contaYpieno, inverti;
+    int r, c, j, i, contaXpieno, contaYpieno; //variabili contatore (righe, colonne, x, y)
 
     char board[42][26];
 
-    c=0;
-    r=8;
-    contaXvuoto = 0;
+    c=0; //colonne all'interno della scacchiera interna
+    r=8; //righe della scacchiera interna
     contaXpieno = 0;
-    contaYvuoto = 0;
     contaYpieno = 0;
-    inverti = -1;
 
     printf("\033[H\033[J");
     for (i = 0; i <= 25; i++)
@@ -36,7 +33,7 @@ int main()
         {
             board[j][i] = loadBoard(j, i, r, c, contaXpieno, contaYpieno);
             c = loadColonna(j, i, c);
-            //printf("%c", board[j][i]);
+            //printf("%c", board[j][i]); //debug
             r = loadRiga(j, i, r);
             if ((i !=0 && j != 0) && (i!=25 && j!=41))
             {
@@ -74,7 +71,7 @@ int main()
         //printf("%d", charWhiteKingX);  //DEBUG
         kingIsValid = validatePosition(whiteKingX, whiteKingY);
     }
-    while (kingIsValid == 0);
+    while (!kingIsValid);
     
     do
     {
@@ -87,7 +84,7 @@ int main()
             blackQueenX = convertCharXintoInt(charBlackQueenX);
             queenIsValid = validatePosition(blackQueenX, blackQueenY);
         }
-        while (queenIsValid == 0);
+        while (!queenIsValid);
         
         if (whiteKingX == blackQueenX && whiteKingY == blackQueenY)
         {
