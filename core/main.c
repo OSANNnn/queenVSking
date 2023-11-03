@@ -68,6 +68,7 @@ int main()
     {
         printf("Insert coordinates for the white King (eg. a5): ");
         scanf(" %c%d", &charWhiteKingX, &whiteKingY);
+        while(getchar()!='\n');
         charWhiteKingX = tolower(charWhiteKingX);
         whiteKingX = convertCharXintoInt(charWhiteKingX);
         //printf("%d", charWhiteKingX);  //DEBUG
@@ -81,6 +82,7 @@ int main()
         {
             printf("Insert coordinates for the black Queen (eg. f6): ");
             scanf(" %c%d", &charBlackQueenX, &blackQueenY);
+            while(getchar()!='\n');
             charBlackQueenX = tolower(charBlackQueenX);
             blackQueenX = convertCharXintoInt(charBlackQueenX);
             queenIsValid = validatePosition(blackQueenX, blackQueenY);
