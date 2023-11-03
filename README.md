@@ -1,4 +1,4 @@
-#QUEEN VS KING
+# QUEEN VS KING
 
 Simple program that checks if the king is in check by the queen, given both position.
 
