@@ -3,20 +3,9 @@
 #include <ctype.h>
 #include "proto.h"
 
-void testing();
 
 int main()
 {
-    
-    testing(); 
-
-    return 0;
-}
-
-
-void testing()
-{
-    
     char charWhiteKingX;
     int  whiteKingX;
     int  whiteKingY;
@@ -125,4 +114,6 @@ void testing()
     }
 
     comparePosition(whiteKingX, whiteKingY, blackQueenX, blackQueenY);
+
+    return 0;
 }
