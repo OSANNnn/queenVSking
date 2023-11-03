@@ -1,3 +1,5 @@
+#QUEEN VS KING
+
 Simple program that checks if the king is in check by the queen, given both position.
 
 Made after one month of coding experience from school.
